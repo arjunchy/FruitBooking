@@ -1,0 +1,485 @@
+/* Reset default margins and paddings */
+body, html {
+  margin: 0;
+  padding: 0;
+  color: #f7d726;
+  background-image: url('C:\Users\aman2\OneDrive\Documents\project\frontend\src\assets\images\background.jpg');
+  background-size: cover ; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+/* Root container styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* Logo hover effect */
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
+}
+
+/* React logo specific hover effect */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animation only if prefers-reduced-motion is not set */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 2em;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 3em; /* Increased margin-top for better spacing between cards */
+}
+
+/* Text style for 'Read the Docs' */
+.read-the-docs {
+  color: #e2d8d8;
+  font-size: 14px;
+  margin-top: 1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  .logo {
+    height: 5em;
+    padding: 1em;
+  }
+  .card {
+    padding: 1.5em;
+  }
+}
+
+/* About container styles */
+.about-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #7896eb90;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(236, 31, 31, 0.1);
+}
+
+.about-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.about-content p {
+  font-size: 2.0rem;
+  color: #d88d5f;
+}
+
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #867c7c;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #ec0303;
+  background-color: #ccaeae;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 80px; 
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.navbar-item {
+  flex: 1;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.navbar-link {
+  text-decoration: slategray;
+  color: #f9dfdf;
+  font-size: 1.6rem;
+  padding: 2px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.fruit-icon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  cursor: pointer;
+  margin-top: 20px; /* Adjust spacing */
+}
+
+.navbar-link:hover {
+  color: #b0ee84;
+  font-style: italic;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.navbar-link:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    justify-content: center;
+  }
+  .navbar-link {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* Home container styles */
+.home-container {
+  background-image: url('/frontend/src/assets/images/background.png');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center;
+  background-blend-mode:soft-light;
+  color: #654747;
+  padding: 0;
+  height: 420vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-hero {
+  padding: 100px 40px;
+  text-align: center;
+  margin-top: -700px; /* Adjusted to clear the fixed navbar */
+}
+
+.home-hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(227, 236, 49, 0.907);
+  
+}
+
+.home-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.home-section {
+  margin-bottom: 80px;
+  background-color: #df4747bf;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+.home-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-section p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.card {
+  margin-top: 3em; /* Increase the space between cards */
+}
+
+/* Additional spacing between sections */
+.home-content > .home-section:not(:last-child),
+.about-content > .about-section:not(:last-child) {
+  margin-bottom: 60px; /* Add more space between sections */
+}
+/* Reset default margins and paddings */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container Styles */
+.contact-container {
+  display: flex;
+  background-color: #de78783c;
+  flex-direction: column;
+  height: 200vh;
+  padding-top: 110px;
+  margin-top: 350px; /* Ensure it clears the fixed navbar */
+  padding: 20px;
+}
+
+.contact-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info, .contact-form-container, .map-container {
+  margin: 2rem 0;
+}
+
+.contact-info h2, .contact-form-container h2, .map-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p, .contact-form p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form-container {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+  width: calc(100% - 1rem);
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.map-container iframe {
+  width: 130%;
+  height: 450px;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    padding: 0rem;
+  }
+
+  .contact-info, .contact-form-container, .map-container {
+    margin: 1rem 0;
+    color: #666;
+  }
+}
+/* index.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.fruit-booking-container {
+  max-width: 800px;
+  margin: 100px auto 20px;
+  padding: 20px;
+}
+
+.fruit-header {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.booking-header {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #f44336; /* Reddish background */
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Fruit List Styles */
+.fruit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.fruit-item {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.fruit-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.fruit-item h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.fruit-item p {
+  color: #666;
+}
+
+/* Booking Form Styles */
+.booking-form {
+  margin-top: 50px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.booking-form select,
+.booking-form input[type='number'] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.booking-btn {
+  background-color: #4caf50; /* Greenish button */
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.booking-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.booking-success {
+  color: #4caf50; /* Green text for success message */
+  margin-top: 10px;
+  font-weight: bold;
+}

@@ -1,4 +1,3 @@
-// src/components/booking.js
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Navbar from './navbar';
@@ -23,7 +22,14 @@ const Booking = () => {
 
   const handleSelectFruit = () => {
     if (selectedFruit && quantity) {
-      setStep('register');
+      // Find the selected fruit
+      const fruit = fruits.find(f => f.id === parseInt(selectedFruit));
+
+      if (fruit && quantity <= fruit.quantity) {
+        setStep('register');
+      } else {
+        alert('The selected fruit is either not available or quantity exceeds the stock.');
+      }
     } else {
       alert('Please select a fruit and enter quantity.');
     }
@@ -46,13 +52,19 @@ const Booking = () => {
       },
       body: JSON.stringify(bookingData),
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          return res.json().then((data) => Promise.reject(data)); // Handling errors if the response is not OK
+        }
+        return res.json();
+      })
       .then((data) => {
         console.log('Booking successful:', data);
-        // Redirect to BookingRegistration page
         navigate('/booking-registration');
       })
-      .catch((error) => console.error('Error booking fruit:', error));
+      .catch((error) => {
+        alert(error.error || 'An error occurred during booking.');
+      });
   };
 
   return (

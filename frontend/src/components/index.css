@@ -380,14 +380,14 @@ body {
 
 .fruit-header {
   text-align: center;
-  color: #fff;
+  color: #f44336;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .booking-header {
   text-align: center;
-  color: #fff;
+  color: #f44336;
   font-size: 2rem;
   margin-top: 40px;
 }
@@ -446,7 +446,7 @@ body {
 .booking-form label {
   display: block;
   margin-bottom: 10px;
-  color: #fff;
+  color: #121111;
 }
 
 .booking-form select,
@@ -461,7 +461,7 @@ body {
 }
 
 .booking-btn {
-  background-color: #4caf50; /* Greenish button */
+  background-color: #f44336; /* Greenish button */
   color: white;
   border: none;
   padding: 15px 20px;
@@ -475,7 +475,7 @@ body {
 }
 
 .booking-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
+  background-color: #a2342c; /* Darker green on hover */
 }
 
 .booking-success {

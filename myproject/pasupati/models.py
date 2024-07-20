@@ -11,9 +11,12 @@ class Fruit(models.Model):
         return self.name
 
 class Booking(models.Model):
+    name = models.CharField(max_length=100,default = "User")
+    phone = models.IntegerField(default = 0)
     fruit = models.ForeignKey(Fruit, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     booking_date = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self):
         return f"{self.quantity} of {self.fruit.name} booked on {self.booking_date}"

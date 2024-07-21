@@ -14,21 +14,29 @@ const Booking = () => {
   const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
+    fetchFruits();
+  }, []);
+
+  const fetchFruits = () => {
     fetch('http://127.0.0.1:8000/pasupati/fruits')
       .then((res) => res.json())
       .then((data) => setFruits(data))
       .catch((error) => console.error('Error fetching fruits:', error));
-  }, []);
+  };
 
   const handleSelectFruit = () => {
     if (selectedFruit && quantity) {
       // Find the selected fruit
       const fruit = fruits.find(f => f.id === parseInt(selectedFruit));
 
-      if (fruit && quantity <= fruit.quantity) {
-        setStep('register');
+      if (fruit) {
+        if (quantity <= fruit.quantity) {
+          setStep('register');
+        } else {
+          alert('The selected fruit quantity exceeds available stock.');
+        }
       } else {
-        alert('The selected fruit is either not available or quantity exceeds the stock.');
+        alert('Selected fruit is not available.');
       }
     } else {
       alert('Please select a fruit and enter quantity.');
@@ -60,6 +68,9 @@ const Booking = () => {
       })
       .then((data) => {
         console.log('Booking successful:', data);
+        // Update the list of available fruits
+        setFruits(data.available_fruits);
+        // Redirect to BookingRegistration page
         navigate('/booking-registration');
       })
       .catch((error) => {

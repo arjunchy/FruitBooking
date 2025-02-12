@@ -11,7 +11,7 @@ const About = () => {
       <div className="about-content">
         <h1>About Us</h1>
         <p>
-        Welcome to Pasupati fruit Center, Your Trusted Wholesale Fruit Shop in Kathmandu
+        Welcome to  fruit Center, Your Trusted Wholesale Fruit Shop in Kathmandu
         </p>
         <section className="about-section">
           <h2>Our Mission</h2>
@@ -28,7 +28,7 @@ const About = () => {
         <section className="about-section">
           <h2>Contact Us</h2>
           <p>
-            Feel free to reach out to us at contact@example.com.
+            Feel free to reach out to us at fruitbooking@gmail.com.
           </p>
         </section>
       </div>

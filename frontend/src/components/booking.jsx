@@ -81,7 +81,7 @@ const Booking = () => {
   return (
     <div className="fruit-booking-container">
       <Navbar />
-      <h1 className="fruit-header">Pasupati Fruit Center</h1>
+      <h1 className="fruit-header">Fruit Center</h1>
 
       {step === 'select' ? (
         <div className="fruit-panel">
@@ -89,7 +89,7 @@ const Booking = () => {
           <div className="fruit-grid">
             {fruits.map((fruit) => (
               <div key={fruit.id} className="fruit-item">
-                <img src={`http://localhost:8000/pasupati/fruits/${fruit.id}/image`} alt={fruit.name} />
+                {/* <img src={`http://localhost:8000/pasupati/fruits/${fruit.id}/image`} alt={fruit.name} /> */}
                 <h3>{fruit.name}</h3>
                 <p>Available Quantity: {fruit.quantity}</p>
               </div>

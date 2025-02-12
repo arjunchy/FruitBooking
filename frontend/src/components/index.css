@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   color: #654747;
-  background-image: url('C:\Users\aman2\OneDrive\Documents\project\frontend\src\assets\images\background.jpg');
+  background-image: url('..\assets\images\background.jpg');
   background-size: cover ; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -203,6 +203,7 @@ body, html {
   color: #654747;
   padding: 0;
   height: 420vh;
+  top: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,7 +213,7 @@ body, html {
 .home-hero {
   padding: 100px 40px;
   text-align: center;
-  margin-top: -700px; /* Adjusted to clear the fixed navbar */
+  margin-top: -150px; /* Adjusted to clear the fixed navbar */
 }
 
 .home-hero h1 {

@@ -13,13 +13,13 @@ const Home = () => {
     <div className="home-container">
       <Navbar />
       <div className="home-hero">
-        <h1>Welcome to Pasupati Fruit Center</h1>
+        <h1>Welcome to Fruit Center</h1>
         <p >We are a leading wholesaler of fresh fruits in Kathmandu, Nepal, dedicated to providing a diverse range of premium fruits to our customers. With a strong commitment to excellence, we ensure that our fruits meet the highest standards of quality, freshness, and safety.</p>
       </div>
       <div className="home-content">
         <section className="home-section">
           <h2>Our Mission</h2>
-          <p>At Pasupati Fruit Center, we strive to build long-lasting relationships with our customers by providing top-quality fruits, timely deliveries, and impeccable packaging. We believe in promoting honesty, transparency, and integrity in all our business dealings.</p>
+          <p>At Fruit Center, we strive to build long-lasting relationships with our customers by providing top-quality fruits, timely deliveries, and impeccable packaging. We believe in promoting honesty, transparency, and integrity in all our business dealings.</p>
         </section>
         <section className="home-section">
           <h2>Importing from India and Nepal</h2>

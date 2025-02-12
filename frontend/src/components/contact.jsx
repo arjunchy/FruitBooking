@@ -16,11 +16,11 @@ const Contact = () => {
         <h1>Contact Us</h1>
         <div className="contact-info">
           <h2>Our Address</h2>
-          <p>Kathmandu 44600, Nepal</p>
+          <p>fruitbooking,india</p>
           <h2>Email</h2>
-          <p>dineshmht@gmail.com</p>
+          <p>fruitbooking@gmail.com</p>
           <h2>Phone</h2>
-          <p>(+977) 7880769332</p>
+          <p>(+91) 123456789</p>
         </div>
         <div className="contact-form-container">
           <h2>Send Us a Message</h2>
